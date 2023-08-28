@@ -12,6 +12,12 @@ LATEST_SCRIPT="$SCRIPTS_DIRECTORY/latest.py"
 TEMPLATE_PATH="$SCRIPTS_DIRECTORY/template.rb"
 FORMULA_PATH="$ROOT_DIRECTORY/Formula/incontext.rb"
 
+# Configure Python.
+export PYTHONUSERBASE="${ROOT_DIRECTORY}/.local/python"
+mkdir -p "$PYTHONUSERBASE"
+export PATH="${PYTHONUSERBASE}/bin":$PATH
+pip3 install --user pipenv
+
 # Create a temporary directory and schedule cleanup.
 TEMPORARY_DIRECTORY=`mktemp -d`
 function cleanup {
