@@ -27,9 +27,13 @@ def main():
                       params={'per_page': 1})
     assert len(releases) == 1
     assets = gh.get(releases[0]['assets_url'])
-    assert len(assets) == 1
-    url = assets[0]['browser_download_url']
-    print(url)
+
+    # Select the correct asset.
+    for asset in assets:
+        if asset["name"].startswith("incontext-"):
+            print(asset["browser_download_url"])
+            exit()
+    exit("Failed to find command asset.")
 
 
 if __name__ == "__main__":
