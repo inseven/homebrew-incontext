@@ -2,8 +2,8 @@ class Incontext < Formula
 
   desc "Static website builder for macOS"
   homepage "https://github.com/inseven/incontext-waialua"
-  url "https://github.com/inseven/incontext/releases/download/3.12.1/incontext-3.12.1-260710175806780890.zip"
-  sha256 "017e4f04ef61fb221524e1af287a45b7dd84c35b9b21ec17025d688c10a5767b"
+  url "https://github.com/inseven/incontext/releases/download/3.12.2/incontext-3.12.2-260712173010998226.zip"
+  sha256 "a4ed0fb7b042a33fffd529a16d93f05bcbd59ef70435b0c499add8d962674b06"
 
   def install
     bin.install Dir["./*"]
